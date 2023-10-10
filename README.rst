@@ -1,4 +1,4 @@
-PyScada Theme Extension
+PyScada Energy Displayer Extension
 =======================
 
 This is a extension for PyScada to add a energy displayer object.

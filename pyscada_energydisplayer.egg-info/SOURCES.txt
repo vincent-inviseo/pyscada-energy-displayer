@@ -1,0 +1,16 @@
+AUTHORS
+CHANGELOG.txt
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+pyscada/__init__.py
+pyscada/EnergyDisplayer/__init__.py
+pyscada/EnergyDisplayer/apps.py
+pyscada/EnergyDisplayer/models.py
+pyscada_energydisplayer.egg-info/PKG-INFO
+pyscada_energydisplayer.egg-info/SOURCES.txt
+pyscada_energydisplayer.egg-info/dependency_links.txt
+pyscada_energydisplayer.egg-info/not-zip-safe
+pyscada_energydisplayer.egg-info/requires.txt
+pyscada_energydisplayer.egg-info/top_level.txt

@@ -38,5 +38,6 @@ class EnergyDisplayer(WidgetContentModel):
         opts["flot"] = False
         opts["object_config_list"] = set()
         opts["javascript_files_list"] = [STATIC_URL + "pyscada/js/energy-displayer.js",]
+        opts["css_files_list"] = [STATIC_URL + "pyscada/css/energy-displayer.css",]
 
         return main_content, None, opts

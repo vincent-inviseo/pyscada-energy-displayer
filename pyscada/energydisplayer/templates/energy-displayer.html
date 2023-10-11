@@ -1,3 +1,10 @@
-<div class="">
-{{ title }} <div class="pyscadaDateTimeChange energy-displayer" id="energy-displayer" data-var-id={{ variable.id }}></div> {{ variable.unit }}
+<div class="energy-displayer-container">
+    <div class="energy-displayer-title">
+        <span class="dot-blue"></span> 
+        {{ title }} 
+    </div> 
+    <div class="energy-displayer-display-container">
+        <div class="pyscadaDateTimeChange energy-displayer-value" data-var-id={{ variable.id }}></div>
+        <div class="energy-displayer-unit"> {{ variable.unit }} </div>
+    </div>
 </div>

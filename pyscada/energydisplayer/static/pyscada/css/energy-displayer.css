@@ -1,0 +1,48 @@
+.energy-displayer-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.15);
+
+    .energy-displayer-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+        border-bottom: solid 1px lightgray;
+
+        .dot-blue {
+            height: 10px;
+            width: 10px;
+            background-color: blue;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+          }
+
+    }
+
+    .energy-displayer-display-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        .energy-displayer-value {
+            font-size: 30px;
+            font-weight: 800;
+            color: black;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+        .energy-displayer-unit {
+            font-size: 20px;
+            color: gray;
+        }
+    }
+}

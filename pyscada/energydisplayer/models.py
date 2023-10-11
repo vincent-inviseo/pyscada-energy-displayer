@@ -29,9 +29,8 @@ class EnergyDisplayer(WidgetContentModel):
         main_content = main_template.render(
             dict(
                 uuid=uuid4().hex,
-                widget_pk=self.id,
                 title=self.title,
-                variable=self.variable
+                variable=self.variable,
             )
         )
         opts = dict()

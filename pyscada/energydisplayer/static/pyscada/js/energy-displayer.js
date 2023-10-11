@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     document.querySelectorAll(".pyscadaDateTimeChange").forEach(el=>el.addEventListener('pyscadaDateTimeChange', update_energy_displayer_value));
- })
+    console.log('document', 'ready')
+})
 
 function update_energy_displayer_value(e) {
     var energy_widget_variable_id = e.target.dataset.varId;

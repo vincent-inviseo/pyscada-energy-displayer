@@ -29,12 +29,13 @@ class EnergyDisplayer(WidgetContentModel):
         main_content = main_template.render(
             dict(
                 uuid=uuid4().hex,
-                title=self.title,
-                variable=self.variable,
+                item=self,
             )
         )
         opts = dict()
         opts["flot"] = False
+        opts["show_daterangepicker"] = True
+        opts["show_timeline"] = True
         opts["object_config_list"] = set()
         opts["javascript_files_list"] = [STATIC_URL + "pyscada/js/energy-displayer.js",]
         opts["css_files_list"] = [STATIC_URL + "pyscada/css/energy-displayer.css",]

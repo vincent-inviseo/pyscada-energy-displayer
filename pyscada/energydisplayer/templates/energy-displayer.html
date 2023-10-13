@@ -1,10 +1,29 @@
 <div class="energy-displayer-container">
     <div class="energy-displayer-title">
         <span class="dot-blue"></span> 
-        {{ title }} 
+        {{ item.title }} 
     </div> 
     <div class="energy-displayer-display-container">
-        <div class="pyscadaDateTimeChange energy-displayer-value" data-var-id={{ variable.id }}></div>
-        <div class="energy-displayer-unit"> {{ variable.unit }} </div>
+        <div class="pyscadaDateTimeChange energy-displayer-value" data-var-id={{ item.variable.id }}></div>
+        <div class="energy-displayer-unit"> {{ item.variable.unit }} </div>
     </div>
 </div>
+<div class="hidden variable-config"
+             data-id="{{ item.variable_id }}-{{ uuid }}"
+             data-name="{{ item.title }}"
+             data-key="{{ item.variable_id }}"
+             data-device-id={{item.variable.device_id}}
+             data-color="{{ item.variable.chart_line_color.color_code }}"
+             data-init-type="0"
+             data-type="variable"
+             data-min="{{ item.variable.min }}"
+             data-max="{{ item.variable.max }}"
+             data-value-class="{{ item.variable.value_class }}"
+             data-min-type="{{ item.variable.min_type }}"
+             data-max-type="{{ item.variable.max_type }}"
+             data-unit="{% if item.variable.unit %}{{ item.variable.unit }}{% endif %}"
+             data-device-polling_interval="{{ item.variable.device.polling_interval }}"
+             data-value-timestamp=""
+             data-refresh-requested-timestamp=""
+             data-dictionary="{{ item.variable.dictionary.dict_as_json }}"
+        ></div>

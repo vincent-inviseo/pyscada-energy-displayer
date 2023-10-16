@@ -7,7 +7,7 @@ This PyScada plugin allow PyScada application to display an energy counter
 This plugin do diffrence between values in end date selected and start date selected
 
 ```
-value_will_display = index_date_end - index_date_end
+value_will_display = index_date_end - index_date_start
 ```
 
 ## Installation

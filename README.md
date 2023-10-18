@@ -16,10 +16,10 @@ First, download this projet using git
 ```
 # Download plugin
 git clone git@github.com:vincent-inviseo/pyscada-energy-displayer.git
-# Move into folder
-cd pyscada-energy-displayer
+# Activate virutal env PyScada
+source /home/pyscada/.venv/bin/activate
 # Install plugin
-pip install .
+sudo -u pyscada -E env PATH=${PATH} pip3 install -e ./pyscada-energy-displayer
 ```
 
 After restart gunicorn

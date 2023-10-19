@@ -2,4 +2,4 @@ include AUTHORS
 include LICENSE
 include README.rst
 include CHANGELOG.txt
-recursive-include pyscada/energy_displayer *
+recursive-include pyscada/energydisplayer *

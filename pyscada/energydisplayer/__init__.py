@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import pyscada
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Vincent Agi"
 __email__ = "team@pyscada.org"
 __description__ = (

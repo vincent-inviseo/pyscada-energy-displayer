@@ -39,6 +39,9 @@
             color: black;
             margin-right: 10px;
             margin-left: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
         }
         .energy-displayer-unit {
             font-size: 20px;

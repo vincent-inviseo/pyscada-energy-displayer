@@ -12,6 +12,9 @@ function update_energy_displayer_value(e) {
         console.log("index_end", index_end, e.detail.picker.endDate.valueOf());
         value_of_start_index = DATA[energy_widget_variable_id][index_start][1]
         value_of_end_index = DATA[energy_widget_variable_id][index_end][1]
-        e.target.innerHTML = value_of_end_index - value_of_start_index
+        value_computed = value_of_end_index - value_of_start_index
+        value_array = value_computed.split('.')
+        value = value_array[0] + "." + value_array[1].substring(0, 2)
+        e.target.innerHTML = value
     }
 }

@@ -43,6 +43,7 @@
             text-overflow: ellipsis;
             max-width: 200px;
         }
+        
         .energy-displayer-unit {
             font-size: 20px;
             color: gray;

@@ -11,6 +11,6 @@ function update_energy_displayer_value(e) {
         value_of_start_index = DATA[energy_widget_variable_id][index_start][1]
         value_of_end_index = DATA[energy_widget_variable_id][index_end][1]
         value_computed = value_of_end_index - value_of_start_index
-        e.target.innerHTML = value_computed
+        e.target.innerHTML = String(value_computed).split(".")[0] + "," + String(value_computed).split(".")[1].substring(0,2)
     }
 }

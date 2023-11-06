@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyscada-energydisplayer
-Version: 0.0.1
+Version: 0.0.2
 Summary: Energy displayer object extension for PyScada a Python and Django based Open Source SCADA System
 Home-page: http://www.github.com/pyscada/PyScada
 Author: Vincent Agi

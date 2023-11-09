@@ -20,11 +20,15 @@ git clone git@github.com:vincent-inviseo/pyscada-energy-displayer.git
 source /home/pyscada/.venv/bin/activate
 # Install plugin
 sudo -u pyscada -E env PATH=${PATH} pip3 install -e ./pyscada-energy-displayer
+# apply migrations
+python3 /var/www/pyscada/PyScadaServer/manage.py migrate
+# copy static files
+sudo -u pyscada -E env PATH=${PATH} python3 /var/www/pyscada/PyScadaServer/manage.py collectstatic
 ```
 
 After restart gunicorn
 ```
-systemctl restart guncorn
+systemctl restart gunicorn
 ```
 
 ## How to use

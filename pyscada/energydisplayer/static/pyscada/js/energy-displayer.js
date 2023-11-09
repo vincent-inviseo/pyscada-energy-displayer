@@ -20,12 +20,10 @@ function update_energy_displayer_value(energy_widget_variable_id, e) {
                 index_start = find_index_sub_gte(DATA[energy_widget_variable_id],picker.startDate.valueOf(),0);
             }
             index_end = find_index_sub_lte(DATA[energy_widget_variable_id],picker.endDate.valueOf(),0);
-            if(index_start != undefined && index_end != undefined) {
-                value_of_start_index = DATA[energy_widget_variable_id][index_start][1]
-                value_of_end_index = DATA[energy_widget_variable_id][index_end][1]
-                value_computed = value_of_end_index - value_of_start_index
-                e.innerHTML = parseFloat(value_computed).toFixed(2)
-            }
+            value_of_start_index = DATA[energy_widget_variable_id][index_start][1]
+            value_of_end_index = DATA[energy_widget_variable_id][index_end][1]
+            value_computed = value_of_end_index - value_of_start_index
+            e.innerHTML = parseFloat(value_computed).toFixed(2)
         }
     }
 }

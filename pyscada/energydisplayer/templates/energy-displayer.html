@@ -1,12 +1,36 @@
+{% if item.isVisible %}
 <div class="energy-displayer-container">
     <div class="energy-displayer-title">
         <span class="dot-blue"></span> 
         {{ item.title }} 
     </div> 
-    <div class="energy-displayer-display-container">
-        <div class="pyscadaDateTimeChange energy-displayer-value" data-var-id={{ item.variable.id }}></div>
-        <div class="energy-displayer-unit"> {{ item.variable.unit }} </div>
-    </div>
+        {%if item.displayType == "CO2 estimation" %}
+            {% if item.showPedagogicConsommation%}
+                <div class="energy-displayer-display-container">
+                    <div class="pyscadaDateTimeChange energy-display-co2-emmission  energy-displayer-value" data-display-type="co2consummation"  data-var-id={{ item.variable.id }} data-var-energy-factor={{item.energyType.GESCoeffienciant}}></div>
+                    <div class="energy-displayer-unit"> KgCo2e </div>
+                </div>
+                <div id="fly">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/BSicon_exFIGHTER.svg/128px-BSicon_exFIGHTER.svg.png" width="30px" height="30px">
+                </div>  
+                <small class="energy-display-co2-emmission-pedagogic">
+                    <div class="pyscadaDateTimeChange energy-display-co2-emmission-pedagogic-value" id="emmission-co2-dsiplay-var-id-{{ item.variable.id }}"></div>
+                    <div class="energy-displayer-co2-emmission-pedagogic-text">allés-retours Paris-New York</div>
+                </small>
+            {%endif%}
+            {% if not item.showPedagogicConsommation%}
+                <div class="energy-displayer-display-container">
+                    <div class="pyscadaDateTimeChange energy-display-co2-emmission  energy-displayer-value" id="emmission-co2-dsiplay-var-id-{{ item.variable.id }}" data-display-type={{ item.displayType }}  data-var-id={{ item.variable.id }} data-var-energy-factor={{item.energyType.GESCoeffienciant}}></div>
+                    <div class="energy-displayer-unit"> KgCo2e </div>
+                </div>
+            {%endif%}
+        {%endif%}
+        {% if item.displayType == "Energy consummation"%}
+            <div class="energy-displayer-display-container">
+                <div class="pyscadaDateTimeChange energy-displayer-value" data-var-id={{ item.variable.id }}></div>
+                <div class="energy-displayer-unit"> {{ item.variable.unit }} </div>
+            </div>
+        {%endif%}
 </div>
 <div class="hidden variable-config"
              data-id="{{ item.variable_id }}-{{ uuid }}"
@@ -27,3 +51,4 @@
              data-refresh-requested-timestamp=""
              data-dictionary="{{ item.variable.dictionary.dict_as_json }}"
         ></div>
+{%endif%}

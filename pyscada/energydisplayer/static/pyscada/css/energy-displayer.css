@@ -23,8 +23,7 @@
             border-radius: 50%;
             display: inline-block;
             margin-right: 10px;
-          }
-
+        }
     }
 
     .energy-displayer-display-container {
@@ -50,3 +49,50 @@
         }
     }
 }
+
+
+.energy-display-co2-emmission-pedagogic {
+
+    display: flex;
+
+    .energy-display-co2-emmission-pedagogic-value {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+
+    .energy-displayer-co2-emmission-pedagogic-text {
+        color: gray;
+        font-size: 20px;
+    }
+}
+
+
+#fly {
+    display: flex;
+    flex-direction: column;
+    -webkit-animation: fly 15s infinite;
+            animation: fly 15s infinite;
+}
+
+    @-webkit-keyframes fly {
+        0%,
+        100% {
+            transform: translateX(0px);
+        }
+
+        50% {
+            transform: translateX(90%);
+        }
+    }
+    @keyframes fly {
+        0%,
+        100% {
+            transform: translateX(0px);
+        }
+
+        50% {
+            transform: translateX(90%);
+        }
+    }  

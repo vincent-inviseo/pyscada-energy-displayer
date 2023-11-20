@@ -52,8 +52,8 @@ systemctl restart gunicorn
         - CO2 estimation show an estimation about CO2 rejected
     - isVisible can toggle show/hide widget
     - Energy type is a relation with this widget. That allow to link this widget with an energy which take a name and a GES emmission coefficiant
-- Go to "Widget" section and complet content field with your new content (energy displayer)
 - Save
+- Don't forget put energy displayer element in widget element (in HMI section).
 
 
 ## Lisence

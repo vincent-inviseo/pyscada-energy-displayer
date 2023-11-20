@@ -1,13 +1,21 @@
 # PyScada Energy Displayer Extension
 
-This PyScada plugin allow PyScada application to display an energy counter
+This PyScada plugin allow PyScada application to display an energy counter or co2 estimate
 
 ## How that works
 
-This plugin do diffrence between values in end date selected and start date selected
+This plugin do diffrence of indexes between end date selected and start date selected. That same functionment. it able to estimate co2 rejected using enegy factor
 
+for energy displayer `energy consummation` mode
 ```
 value_will_display = index_date_end - index_date_start
+```
+
+for energy displayer `co2 estimate` mode
+```
+consummation = index_date_end - index_date_start
+value_will_display = consummation * energy_factor
+
 ```
 
 ## Installation
@@ -35,7 +43,15 @@ systemctl restart gunicorn
 
 - Access to PyScada administration
 - Click on add button on Energy displayers section
-- Fill title field and complete variable will be count
+- Fill fields :
+    - Title is title of your energy displayer widget
+    - Variable is the variable will be compute that will do
+    - "Show pedagogic consommation display" is a pedagogic show for CO2 estimation will compare your CO2 estimation to go-back in plane between Paris and New York
+    - "display type" change display mode
+        - Energy consummation show energy consummed in kWh
+        - CO2 estimation show an estimation about CO2 rejected
+    - isVisible can toggle show/hide widget
+    - Energy type is a relation with this widget. That allow to link this widget with an energy which take a name and a GES emmission coefficiant
 - Go to "Widget" section and complet content field with your new content (energy displayer)
 - Save
 
